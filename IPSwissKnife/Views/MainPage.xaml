@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IPSwissKnife.MainPage"
+             Title="MainPage"
+             BackgroundColor="{DynamicResource BackgroundDarkColor}">
+    <ScrollView>
+        <Grid ColumnDefinitions="Auto,130"
+			  RowDefinitions="Auto,Auto,10,Auto"
+			  RowSpacing="5">
+
+            <Label GridLayout.Column="0"
+				   GridLayout.Row="0"
+				   Text="address" />
+
+            <Entry GridLayout.Column="1"
+				   GridLayout.Row="0"
+				   Placeholder="127.0.0.1" />
+
+            <Label GridLayout.Column="0"
+				   GridLayout.Row="1"
+				   Text="port" />
+
+            <Entry GridLayout.Column="1"
+				   GridLayout.Row="1"
+				   Placeholder="0" />
+
+            <Button GridLayout.Row="3"
+					GridLayout.ColumnSpan="2"
+					Text="create" />
+
+        </Grid>
+    </ScrollView>
+</ContentPage>
