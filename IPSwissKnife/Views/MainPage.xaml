@@ -1,9 +1,14 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModels="clr-namespace:IPSwissKnife.ViewModels"
              x:Class="IPSwissKnife.MainPage"
              Title="MainPage"
              BackgroundColor="{DynamicResource BackgroundDarkColor}">
+    <ContentPage.BindingContext>
+        <ViewModels:ConnectionViewModel />
+    </ContentPage.BindingContext>
+    
     <ScrollView>
         <Grid ColumnDefinitions="Auto,130"
 			  RowDefinitions="Auto,Auto,10,Auto"
@@ -27,7 +32,8 @@
 
             <Button GridLayout.Row="3"
 					GridLayout.ColumnSpan="2"
-					Text="create" />
+					Text="create" 
+                    Command="{Binding CreateConnectionCommand}"/>
 
         </Grid>
     </ScrollView>
